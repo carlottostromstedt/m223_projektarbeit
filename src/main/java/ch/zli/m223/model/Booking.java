@@ -58,7 +58,8 @@ public class Booking {
   @JoinTable(
   name = "application_user_booking", 
   joinColumns = @JoinColumn(name = "application_user_id"), 
-  inverseJoinColumns = @JoinColumn(name = "booking_id"))
+  inverseJoinColumns = @JoinColumn(name = "booking_id"),
+  uniqueConstraints = @UniqueConstraint(columnNames = {"booking_id", "application_user_id"})) 
   Set<ApplicationUser> participants;
 
   @JsonIgnoreProperties("bookings")
