@@ -1,7 +1,3 @@
-#### Diagramm - Bild
-
-<img src="assets/anwendungsfalldiagramm.png" height="800">
-
 ## 2 - Persistenzschicht planen
 
 ### 2.1 Fachklassendiagramm
@@ -26,6 +22,8 @@ https://dbdiagram.io/d
 ```sql
 Table application_user {
   id integer [primary key]
+  firstname varchar
+  lastname varchar
   email varchar unique
 	username varchar unique
 	password varchar unique
@@ -39,9 +37,12 @@ Table role {
 
 Table booking {
   id integer [primary key]
+  acceptancestate varchar
+  state varchar
   booking_day date
   meeting_room_id integer
   time_slot_id integer
+  nocco_id integer
 }
 
 Table time_slot {
@@ -59,10 +60,6 @@ Table meeting_room {
   name varchar unique
 }
 
-Table booking_nocco {
-  booking_id integer
-  nocco_id integer
-}
 
 Table nocco {
   id integer [primary key]
@@ -72,11 +69,10 @@ Table nocco {
 
 Ref: booking_application_user.application_user_id > application_user.id
 Ref: booking_application_user.booking_id > booking.id
-Ref: booking.meeting_room_id - meeting_room.id
-Ref: booking_nocco.booking_id > booking.id
-Ref: booking_nocco.nocco_id > nocco.id
-Ref: application_user.role_id - role.id
-Ref: booking.time_slot_id - time_slot.id
+Ref: booking.meeting_room_id > meeting_room.id
+Ref: booking.nocco_id > nocco.id
+Ref: application_user.role_id > role.id
+Ref: booking.time_slot_id > time_slot.id
 ```
 
 ###### Bild des ERDs
@@ -90,6 +86,8 @@ Ref: booking.time_slot_id - time_slot.id
 ```sql
 Table ApplicationUser {
   id integer [primary key]
+  firstname String
+  lastname String
   email String
 	username String
 	password String
@@ -104,6 +102,8 @@ Table Role {
 Table Booking {
   id integer [primary key]
   bookingDate date
+  acceptancestate enum
+  state enum
   participants "Set<ApplicationUser>"
   meetingRoom MeetingRoom
   noccos "Set<Nocco>"
@@ -132,7 +132,6 @@ Ref: Booking.meetingRoom > MeetingRoom.id
 Ref: Booking.noccos <> Nocco.id
 Ref: Booking.timeSlot > TimeSlot.id
 ```
-
 ###### Bild des Fachklassendiagramms
 
 <img src="assets/fachklassendiagramm.png" width="600" >
