@@ -1,4 +1,36 @@
-# Projektarbeit Uek M223
+# Projektarbeit Uek M223 - Coworking-Space-Buchungsapplikation
+
+## Setup
+
+1. Git-Projekt klonen
+2. Stelle sicher, dass Docker installiert ist und läuft.
+3. Verzeichnis mit VS-Code öffnen
+4. Dev-Container Extension installieren https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers
+5. Öffne das Projekt im Entwicklungscontainer.
+6. Starte das Projekt mit dem Kommando `Quarkus: Debug current Quarkus Project`
+
+### Web-Applikation
+
+Die Applikation läuft auf der addresse und port: http://localhost:8080
+
+Swagger API Interface läuft auf http://localhost:8080/q/swagger-ui/ 
+
+### Datenbank
+
+Die Daten werden in einer PostgreSQL-Datenbank gespeichert. In der Entwicklungsumgebung wird diese in der [docker-compose-yml](./.devcontainer/docker-compose.yml) konfiguriert.
+
+### Datenbankadministration
+
+Über http://localhost:5050 ist PgAdmin4 erreichbar. Damit lässt sich die Datenbank komfortabel verwalten. Der Benutzername lautet `zli@example.com` und das Passwort `zli*123`. Die Verbindung zur PostgreSQL-Datenbank muss zuerst mit folgenden Daten konfiguriert werden:
+ - Host name/address: `db`
+ - Port: `5432`
+ - Maintenance database: `postgres`
+ - Username: `postgres`
+ - Password: `postgres`
+
+### Testdaten
+
+Testdaten sind unter `src/main/resources/import.sql`. Sie werden automatisch beim Start von Quarkus geladen.
 
 ## Ausgangslage
 Ein Coworking Space in der Agglomeration von Zürich möchte in Zukunft seine Mitglieder und die Nutzung des Angebots digital über eine Webapplikation erfassen. Dazu sollte zuerst ein minimaler Prototyp realisiert werden, um den Kunden besser abholen zu können.
