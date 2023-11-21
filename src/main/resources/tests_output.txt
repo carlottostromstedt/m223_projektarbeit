@@ -1,0 +1,259 @@
+APPLICATION USER BLOCK:
+
+Create User:
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   361  100   218  100   143    933    612 --:--:-- --:--:-- --:--:--  1569
+
+
+{"id":12,"firstName":"test","lastName":"tester","email":"test@email.com","username":"testerino","password":"$2a$10$3O4gjFA/58/KisQjvyiKuueyq97MDN0IRJz2UR7mmQaYPSuvp1s42","role":{"id":1,"type":"Member"},"bookings":null}
+
+
+
+Login with this User:
+
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+content-length: 48
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tL2lzc3VlciIsInVwbiI6Impkb2VAcXVhcmt1cy5pbyIsImdyb3VwcyI6WyJNZW1iZXIiXSwiZW1haWwiOiJ0ZXN0QGVtYWlsLmNvbSIsImlhdCI6MTcwMDU4MDM0MiwiZXhwIjoxNzAwNjIzNTQyLCJqdGkiOiI2OTdhODYwMS1kNTA0LTQ1MWEtYTk2Yy1jZjczN2I2NGI4NjMifQ.fwBPKcaIeTwhy4hSyShj2MO9nXODxeCuixIGnIDgKxx6VzcbPJC8ADpYMirswfDEmcp83pbydDeP5gpHRTqcNKaDhUBvDMkoP5NLlO-AaE6v2alPWcxPSu5mxTWzKTJ6jf9EXGl_CANAKycgmHwm-Zp6LHf5x2Cn8_-Iu7UwabUpvoT9ORxyAkw7ADqBhsY4bIydhYRnL2otsB-wQ7ycyrv0pXPzLjdw1Xpkw5lwPpP17q7BrUaLc2naU2ETmPh_6YY4bB_F6t4l5iiZX2Ws9BMxc6d69TqzPxt9zXMllY-oMzMbzGcJNBB0rR_1j2zYfivmZ-OJtzD0mQRmszsmFg
+Set-Cookie: coworking=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tL2lzc3VlciIsInVwbiI6Impkb2VAcXVhcmt1cy5pbyIsImdyb3VwcyI6WyJNZW1iZXIiXSwiZW1haWwiOiJ0ZXN0QGVtYWlsLmNvbSIsImlhdCI6MTcwMDU4MDM0MiwiZXhwIjoxNzAwNjIzNTQyLCJqdGkiOiI2OTdhODYwMS1kNTA0LTQ1MWEtYTk2Yy1jZjczN2I2NGI4NjMifQ.fwBPKcaIeTwhy4hSyShj2MO9nXODxeCuixIGnIDgKxx6VzcbPJC8ADpYMirswfDEmcp83pbydDeP5gpHRTqcNKaDhUBvDMkoP5NLlO-AaE6v2alPWcxPSu5mxTWzKTJ6jf9EXGl_CANAKycgmHwm-Zp6LHf5x2Cn8_-Iu7UwabUpvoT9ORxyAkw7ADqBhsY4bIydhYRnL2otsB-wQ7ycyrv0pXPzLjdw1Xpkw5lwPpP17q7BrUaLc2naU2ETmPh_6YY4bB_F6t4l5iiZX2Ws9BMxc6d69TqzPxt9zXMllY-oMzMbzGcJNBB0rR_1j2zYfivmZ-OJtzD0mQRmszsmFg;Version=1
+
+{"email":"test@email.com","password":"test1234"}
+
+Index Users as Administrator:
+
+[{"id":1,"firstName":"Luke","lastName":"Skywalker","email":"luke@jedi.com","username":"skywalker","password":"$2a$12$tFC3Hqn/YDkmWYwdn5yaIeXlMcILj0E0hJI.PTBLX01OCPciHg6OG","role":{"id":2,"type":"Administrator"},"bookings":[]},{"id":2,"firstName":"Treasure","lastName":"Hunter","email":"treasurehunter@email.com","username":"treasureHunter","password":"$2a$12$fudMJx8ZZrXBx/QqmZwiqOWfykAC.4f453DwTl6YOBKSVX4hnHnfO","role":{"id":1,"type":"Member"},"bookings":[{"id":1,"bookingDate":"2022-03-10","acceptanceState":"PENDING","state":"ACTIVE","meetingRoom":{"id":1,"roomName":"Alpha"},"timeSlot":{"id":1,"type":"Morning"},"nocco":{"id":2,"name":"Limon del Sol","caffeine":180}},{"id":2,"bookingDate":"2022-03-10","acceptanceState":"ACCEPTED","state":"CANCELED","meetingRoom":{"id":2,"roomName":"Bravo"},"timeSlot":{"id":2,"type":"Afternoon"},"nocco":{"id":3,"name":"Blood Orange","caffeine":180}}]},{"id":4,"firstName":"Music","lastName":"Maestro","email":"musicmaestro@email.com","username":"musicMaestro","password":"$2a$12$k5i98QmJz/P2Hn3CSnMWy.oiD2ZfjuLQgH2nX5U2x80t0qZCviYYi","role":{"id":1,"type":"Member"},"bookings":[{"id":1,"bookingDate":"2022-03-10","acceptanceState":"PENDING","state":"ACTIVE","meetingRoom":{"id":1,"roomName":"Alpha"},"timeSlot":{"id":1,"type":"Morning"},"nocco":{"id":2,"name":"Limon del Sol","caffeine":180}}]},{"id":5,"firstName":"Wander","lastName":"lust23","email":"wander@email.com","username":"wanderlust23","password":"$2a$12$CeOXyO34IF1Drz1Z3mf6Uex2vz6zpRZErQYe/ub3V2bpqo7KKCUaW","role":{"id":1,"type":"Member"},"bookings":[]},{"id":6,"firstName":"Code","lastName":"Wizard","email":"codewizard@email.com","username":"codeWizard","password":"$2a$12$csVljFjaV2aoW8attpAxc.GvaWIcOQ4SsWYk1GiEvxXNFuO9UYaCy","role":{"id":1,"type":"Member"},"bookings":[]},{"id":7,"firstName":"Coffee","lastName":"Addict","email":"coffee@email.com","username":"coffeeAddict","password":"$2a$12$VcC9pIWDMs6LjJqXdq2vc.Hm7nSKnsWyvLnoK/PB.HQU9IIlDNt7G","role":{"id":1,"type":"Member"},"bookings":[]},{"id":8,"firstName":"Book","lastName":"Worm","email":"bookworm@email.com","username":"bookworm","password":"$2a$12$VrYsEdJ3l.Gm7y/xCZx2Ze7aplwaTkhWnKrGjFvSHSaJj4RFYXoQS","role":{"id":1,"type":"Member"},"bookings":[]},{"id":9,"firstName":"Garden","lastName":"Guru","email":"garden@email.com","username":"gardenGuru","password":"$2a$12$ezcMACiDoqzdRnyzG1V9cOiZENv4DBz.SIHQGgwAXiy6rkViKZL5a","role":{"id":1,"type":"Member"},"bookings":[]},{"id":10,"firstName":"Midnight","lastName":"Rider","email":"midnight@email.com","username":"midnightRider","password":"$2a$12$1Qs6OGZB4ATwbg5f1Rxr2ulIpc2uawA2pGu6IRLENl1p1J4K/Vwye","role":{"id":1,"type":"Member"},"bookings":[]},{"id":3,"firstName":"Update","lastName":"Me","email":"update@me.com","username":"updateme","password":"update1234","role":null,"bookings":[{"id":4,"bookingDate":"2022-03-13","acceptanceState":"PENDING","state":"ACTIVE","meetingRoom":{"id":4,"roomName":"Delta"},"timeSlot":{"id":1,"type":"Morning"},"nocco":{"id":1,"name":"Mango","caffeine":180}}]},{"id":12,"firstName":"test","lastName":"tester","email":"test@email.com","username":"testerino","password":"$2a$10$3O4gjFA/58/KisQjvyiKuueyq97MDN0IRJz2UR7mmQaYPSuvp1s42","role":{"id":1,"type":"Member"},"bookings":[]}]
+
+Update user as Administrator:
+
+HTTP/1.1 200 OK
+content-length: 143
+Content-Type: application/json;charset=UTF-8
+
+{"id":3,"firstName":"Update","lastName":"Me","email":"update@me.com","username":"updateme","password":"update1234","role":null,"bookings":null}
+
+Delete user as Administrator:
+
+User ID: 12
+HTTP/1.1 200 OK
+content-length: 0
+
+
+
+BOOKING BLOCK:
+
+
+
+Index Administrator (All) Bookings:
+
+[{"id":1,"bookingDate":"2022-03-10","acceptanceState":"PENDING","state":"ACTIVE","participants":[{"id":2,"firstName":"Treasure","lastName":"Hunter","email":"treasurehunter@email.com","username":"treasureHunter","password":"$2a$12$fudMJx8ZZrXBx/QqmZwiqOWfykAC.4f453DwTl6YOBKSVX4hnHnfO","role":{"id":1,"type":"Member"}},{"id":4,"firstName":"Music","lastName":"Maestro","email":"musicmaestro@email.com","username":"musicMaestro","password":"$2a$12$k5i98QmJz/P2Hn3CSnMWy.oiD2ZfjuLQgH2nX5U2x80t0qZCviYYi","role":{"id":1,"type":"Member"}}],"meetingRoom":{"id":1,"roomName":"Alpha"},"timeSlot":{"id":1,"type":"Morning"},"nocco":{"id":2,"name":"Limon del Sol","caffeine":180}},{"id":4,"bookingDate":"2022-03-13","acceptanceState":"PENDING","state":"ACTIVE","participants":[{"id":3,"firstName":"Update","lastName":"Me","email":"update@me.com","username":"updateme","password":"update1234","role":null}],"meetingRoom":{"id":4,"roomName":"Delta"},"timeSlot":{"id":1,"type":"Morning"},"nocco":{"id":1,"name":"Mango","caffeine":180}},{"id":2,"bookingDate":"2022-03-10","acceptanceState":"ACCEPTED","state":"CANCELED","participants":[{"id":2,"firstName":"Treasure","lastName":"Hunter","email":"treasurehunter@email.com","username":"treasureHunter","password":"$2a$12$fudMJx8ZZrXBx/QqmZwiqOWfykAC.4f453DwTl6YOBKSVX4hnHnfO","role":{"id":1,"type":"Member"}}],"meetingRoom":{"id":2,"roomName":"Bravo"},"timeSlot":{"id":2,"type":"Afternoon"},"nocco":{"id":3,"name":"Blood Orange","caffeine":180}},{"id":3,"bookingDate":"2023-03-10","acceptanceState":"DECLINED","state":"ACTIVE","participants":[],"meetingRoom":{"id":4,"roomName":"Delta"},"timeSlot":{"id":2,"type":"Afternoon"},"nocco":{"id":4,"name":"Black Orange","caffeine":180}}]
+
+Member Bookings:
+
+[{"id":1,"bookingDate":"2022-03-10","acceptanceState":"PENDING","state":"ACTIVE","participants":[{"id":2,"firstName":"Treasure","lastName":"Hunter","email":"treasurehunter@email.com","username":"treasureHunter","password":"$2a$12$fudMJx8ZZrXBx/QqmZwiqOWfykAC.4f453DwTl6YOBKSVX4hnHnfO","role":{"id":1,"type":"Member"}},{"id":4,"firstName":"Music","lastName":"Maestro","email":"musicmaestro@email.com","username":"musicMaestro","password":"$2a$12$k5i98QmJz/P2Hn3CSnMWy.oiD2ZfjuLQgH2nX5U2x80t0qZCviYYi","role":{"id":1,"type":"Member"}}],"meetingRoom":{"id":1,"roomName":"Alpha"},"timeSlot":{"id":1,"type":"Morning"},"nocco":{"id":2,"name":"Limon del Sol","caffeine":180}},{"id":2,"bookingDate":"2022-03-10","acceptanceState":"ACCEPTED","state":"CANCELED","participants":[{"id":2,"firstName":"Treasure","lastName":"Hunter","email":"treasurehunter@email.com","username":"treasureHunter","password":"$2a$12$fudMJx8ZZrXBx/QqmZwiqOWfykAC.4f453DwTl6YOBKSVX4hnHnfO","role":{"id":1,"type":"Member"}}],"meetingRoom":{"id":2,"roomName":"Bravo"},"timeSlot":{"id":2,"type":"Afternoon"},"nocco":{"id":3,"name":"Blood Orange","caffeine":180}}]
+
+Show a single booking:
+
+{"id":1,"bookingDate":"2022-03-10","acceptanceState":"PENDING","state":"ACTIVE","participants":[{"id":2,"firstName":"Treasure","lastName":"Hunter","email":"treasurehunter@email.com","username":"treasureHunter","password":"$2a$12$fudMJx8ZZrXBx/QqmZwiqOWfykAC.4f453DwTl6YOBKSVX4hnHnfO","role":{"id":1,"type":"Member"}},{"id":4,"firstName":"Music","lastName":"Maestro","email":"musicmaestro@email.com","username":"musicMaestro","password":"$2a$12$k5i98QmJz/P2Hn3CSnMWy.oiD2ZfjuLQgH2nX5U2x80t0qZCviYYi","role":{"id":1,"type":"Member"}}],"meetingRoom":{"id":1,"roomName":"Alpha"},"timeSlot":{"id":1,"type":"Morning"},"nocco":{"id":2,"name":"Limon del Sol","caffeine":180}}
+
+Create Booking as Administrator:
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   398  100   213  100   185   1867   1622 --:--:-- --:--:-- --:--:--  3618
+
+
+{"id":7,"bookingDate":"2023-03-10","acceptanceState":"PENDING","state":"ACTIVE","participants":null,"meetingRoom":{"id":1,"roomName":null},"timeSlot":{"id":2,"type":null},"nocco":{"id":2,"name":null,"caffeine":0}}
+
+
+Create Booking as Member:
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   398  100   213  100   185   1931   1677 --:--:-- --:--:-- --:--:--  3719
+
+
+{"id":8,"bookingDate":"2023-04-10","acceptanceState":"PENDING","state":"ACTIVE","participants":null,"meetingRoom":{"id":1,"roomName":null},"timeSlot":{"id":2,"type":null},"nocco":{"id":2,"name":null,"caffeine":0}}
+
+
+Update Booking as Administrator:
+
+HTTP/1.1 200 OK
+content-length: 235
+Content-Type: application/json;charset=UTF-8
+
+{"id":3,"bookingDate":"2023-03-10","acceptanceState":"PENDING","state":"ACTIVE","participants":null,"meetingRoom":{"id":4,"roomName":"Delta"},"timeSlot":{"id":2,"type":"Afternoon"},"nocco":{"id":4,"name":"Black Orange","caffeine":180}}
+
+Cancel Booking as Member:
+
+HTTP/1.1 204 No Content
+
+{"id":2,"bookingDate":"2022-03-10","acceptanceState":"ACCEPTED","state":"CANCELED","participants":[{"id":2,"firstName":"Treasure","lastName":"Hunter","email":"treasurehunter@email.com","username":"treasureHunter","password":"$2a$12$fudMJx8ZZrXBx/QqmZwiqOWfykAC.4f453DwTl6YOBKSVX4hnHnfO","role":{"id":1,"type":"Member"}}],"meetingRoom":{"id":2,"roomName":"Bravo"},"timeSlot":{"id":2,"type":"Afternoon"},"nocco":{"id":3,"name":"Blood Orange","caffeine":180}}
+
+Accept Booking as Administrator:
+
+HTTP/1.1 204 No Content
+
+{"id":2,"bookingDate":"2022-03-10","acceptanceState":"ACCEPTED","state":"CANCELED","participants":[{"id":2,"firstName":"Treasure","lastName":"Hunter","email":"treasurehunter@email.com","username":"treasureHunter","password":"$2a$12$fudMJx8ZZrXBx/QqmZwiqOWfykAC.4f453DwTl6YOBKSVX4hnHnfO","role":{"id":1,"type":"Member"}}],"meetingRoom":{"id":2,"roomName":"Bravo"},"timeSlot":{"id":2,"type":"Afternoon"},"nocco":{"id":3,"name":"Blood Orange","caffeine":180}}
+
+Decline Booking as Administrator:
+
+HTTP/1.1 204 No Content
+
+{"id":2,"bookingDate":"2022-03-10","acceptanceState":"ACCEPTED","state":"CANCELED","participants":[{"id":2,"firstName":"Treasure","lastName":"Hunter","email":"treasurehunter@email.com","username":"treasureHunter","password":"$2a$12$fudMJx8ZZrXBx/QqmZwiqOWfykAC.4f453DwTl6YOBKSVX4hnHnfO","role":{"id":1,"type":"Member"}}],"meetingRoom":{"id":2,"roomName":"Bravo"},"timeSlot":{"id":2,"type":"Afternoon"},"nocco":{"id":3,"name":"Blood Orange","caffeine":180}}
+
+Delete a booking:
+
+Booking ID: 7
+HTTP/1.1 204 No Content
+
+HTTP/1.1 204 No Content
+
+
+
+MEETING ROOM BLOCK:
+
+
+
+Index Administrator (All) Meeting Rooms:
+
+[{"id":1,"roomName":"Alpha","bookings":[{"id":1,"bookingDate":"2022-03-10","acceptanceState":"PENDING","state":"ACTIVE","meetingRoom":{"id":1,"roomName":"Alpha"},"timeSlot":{"id":1,"type":"Morning"},"nocco":{"id":2,"name":"Limon del Sol","caffeine":180}}]},{"id":2,"roomName":"Bravo","bookings":[{"id":2,"bookingDate":"2022-03-10","acceptanceState":"ACCEPTED","state":"CANCELED","meetingRoom":{"id":2,"roomName":"Bravo"},"timeSlot":{"id":2,"type":"Afternoon"},"nocco":{"id":3,"name":"Blood Orange","caffeine":180}}]},{"id":3,"roomName":"Charlie","bookings":[]},{"id":4,"roomName":"Delta","bookings":[{"id":3,"bookingDate":"2023-03-10","acceptanceState":"DECLINED","state":"ACTIVE","meetingRoom":{"id":4,"roomName":"Delta"},"timeSlot":{"id":2,"type":"Afternoon"},"nocco":{"id":4,"name":"Black Orange","caffeine":180}},{"id":4,"bookingDate":"2022-03-13","acceptanceState":"PENDING","state":"ACTIVE","meetingRoom":{"id":4,"roomName":"Delta"},"timeSlot":{"id":1,"type":"Morning"},"nocco":{"id":1,"name":"Mango","caffeine":180}}]}]
+
+Show a single Meeting Room:
+
+{"id":1,"roomName":"Alpha","bookings":[{"id":1,"bookingDate":"2022-03-10","acceptanceState":"PENDING","state":"ACTIVE","meetingRoom":{"id":1,"roomName":"Alpha"},"timeSlot":{"id":1,"type":"Morning"},"nocco":{"id":2,"name":"Limon del Sol","caffeine":180}}]}
+
+Create Meeting Room:
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    72  100    45  100    27    381    229 --:--:-- --:--:-- --:--:--   631
+
+
+{"id":6,"roomName":"Epsilon","bookings":null}
+
+
+Update Meeting Room as Administrator:
+
+HTTP/1.1 200 OK
+content-length: 46
+Content-Type: application/json;charset=UTF-8
+
+{"id":6,"roomName":"TestRoom","bookings":null}{"id":6,"roomName":"TestRoom","bookings":[]}
+
+Delete a Meeting Room:
+
+Meeting Room ID: 6
+HTTP/1.1 204 No Content
+
+
+
+NOCCO BLOCK:
+
+
+
+Index Administrator (All) Noccos:
+
+[{"id":1,"name":"Mango","caffeine":180,"bookings":[{"id":4,"bookingDate":"2022-03-13","acceptanceState":"PENDING","state":"ACTIVE","meetingRoom":{"id":4,"roomName":"Delta"},"timeSlot":{"id":1,"type":"Morning"},"nocco":{"id":1,"name":"Mango","caffeine":180}}]},{"id":2,"name":"Limon del Sol","caffeine":180,"bookings":[{"id":1,"bookingDate":"2022-03-10","acceptanceState":"PENDING","state":"ACTIVE","meetingRoom":{"id":1,"roomName":"Alpha"},"timeSlot":{"id":1,"type":"Morning"},"nocco":{"id":2,"name":"Limon del Sol","caffeine":180}}]},{"id":3,"name":"Blood Orange","caffeine":180,"bookings":[{"id":2,"bookingDate":"2022-03-10","acceptanceState":"ACCEPTED","state":"CANCELED","meetingRoom":{"id":2,"roomName":"Bravo"},"timeSlot":{"id":2,"type":"Afternoon"},"nocco":{"id":3,"name":"Blood Orange","caffeine":180}}]},{"id":4,"name":"Black Orange","caffeine":180,"bookings":[{"id":3,"bookingDate":"2023-03-10","acceptanceState":"DECLINED","state":"ACTIVE","meetingRoom":{"id":4,"roomName":"Delta"},"timeSlot":{"id":2,"type":"Afternoon"},"nocco":{"id":4,"name":"Black Orange","caffeine":180}}]}]
+
+Show a single Nocco:
+
+{"id":1,"name":"Mango","caffeine":180,"bookings":[{"id":4,"bookingDate":"2022-03-13","acceptanceState":"PENDING","state":"ACTIVE","meetingRoom":{"id":4,"roomName":"Delta"},"timeSlot":{"id":1,"type":"Morning"},"nocco":{"id":1,"name":"Mango","caffeine":180}}]}
+
+Create Nocco:
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    94  100    54  100    40    498    369 --:--:-- --:--:-- --:--:--   895
+
+
+{"id":6,"name":"Peach","caffeine":180,"bookings":null}
+
+
+Update Nocco as Administrator:
+
+HTTP/1.1 200 OK
+content-length: 53
+Content-Type: application/json;charset=UTF-8
+
+{"id":6,"name":"pear","caffeine":360,"bookings":null}{"id":6,"name":"pear","caffeine":360,"bookings":[]}
+
+Delete a Nocco:
+
+Nocco ID: 6
+HTTP/1.1 204 No Content
+
+
+
+TIME SLOT BLOCK:
+
+
+
+Index Administrator (All) time slots:
+
+[{"id":1,"type":"Morning","bookings":[{"id":4,"bookingDate":"2022-03-13","acceptanceState":"PENDING","state":"ACTIVE","participants":[{"id":3,"firstName":"Update","lastName":"Me","email":"update@me.com","username":"updateme","password":"update1234","role":null}],"meetingRoom":{"id":4,"roomName":"Delta"},"timeSlot":{"id":1,"type":"Morning"},"nocco":{"id":1,"name":"Mango","caffeine":180}},{"id":1,"bookingDate":"2022-03-10","acceptanceState":"PENDING","state":"ACTIVE","participants":[{"id":2,"firstName":"Treasure","lastName":"Hunter","email":"treasurehunter@email.com","username":"treasureHunter","password":"$2a$12$fudMJx8ZZrXBx/QqmZwiqOWfykAC.4f453DwTl6YOBKSVX4hnHnfO","role":{"id":1,"type":"Member"}},{"id":4,"firstName":"Music","lastName":"Maestro","email":"musicmaestro@email.com","username":"musicMaestro","password":"$2a$12$k5i98QmJz/P2Hn3CSnMWy.oiD2ZfjuLQgH2nX5U2x80t0qZCviYYi","role":{"id":1,"type":"Member"}}],"meetingRoom":{"id":1,"roomName":"Alpha"},"timeSlot":{"id":1,"type":"Morning"},"nocco":{"id":2,"name":"Limon del Sol","caffeine":180}}]},{"id":2,"type":"Afternoon","bookings":[{"id":3,"bookingDate":"2023-03-10","acceptanceState":"DECLINED","state":"ACTIVE","participants":[],"meetingRoom":{"id":4,"roomName":"Delta"},"timeSlot":{"id":2,"type":"Afternoon"},"nocco":{"id":4,"name":"Black Orange","caffeine":180}},{"id":2,"bookingDate":"2022-03-10","acceptanceState":"ACCEPTED","state":"CANCELED","participants":[{"id":2,"firstName":"Treasure","lastName":"Hunter","email":"treasurehunter@email.com","username":"treasureHunter","password":"$2a$12$fudMJx8ZZrXBx/QqmZwiqOWfykAC.4f453DwTl6YOBKSVX4hnHnfO","role":{"id":1,"type":"Member"}}],"meetingRoom":{"id":2,"roomName":"Bravo"},"timeSlot":{"id":2,"type":"Afternoon"},"nocco":{"id":3,"name":"Blood Orange","caffeine":180}}]},{"id":3,"type":"Whole-Day","bookings":[]}]
+
+Show a single time slot:
+
+{"id":1,"type":"Morning","bookings":[{"id":1,"bookingDate":"2022-03-10","acceptanceState":"PENDING","state":"ACTIVE","participants":[{"id":2,"firstName":"Treasure","lastName":"Hunter","email":"treasurehunter@email.com","username":"treasureHunter","password":"$2a$12$fudMJx8ZZrXBx/QqmZwiqOWfykAC.4f453DwTl6YOBKSVX4hnHnfO","role":{"id":1,"type":"Member"}},{"id":4,"firstName":"Music","lastName":"Maestro","email":"musicmaestro@email.com","username":"musicMaestro","password":"$2a$12$k5i98QmJz/P2Hn3CSnMWy.oiD2ZfjuLQgH2nX5U2x80t0qZCviYYi","role":{"id":1,"type":"Member"}}],"meetingRoom":{"id":1,"roomName":"Alpha"},"timeSlot":{"id":1,"type":"Morning"},"nocco":{"id":2,"name":"Limon del Sol","caffeine":180}},{"id":4,"bookingDate":"2022-03-13","acceptanceState":"PENDING","state":"ACTIVE","participants":[{"id":3,"firstName":"Update","lastName":"Me","email":"update@me.com","username":"updateme","password":"update1234","role":null}],"meetingRoom":{"id":4,"roomName":"Delta"},"timeSlot":{"id":1,"type":"Morning"},"nocco":{"id":1,"name":"Mango","caffeine":180}}]}
+
+Create time slot:
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    66  100    42  100    24    266    152 --:--:-- --:--:-- --:--:--   431
+
+
+{"id":5,"type":"Evenings","bookings":null}
+
+
+Update time slot as Administrator:
+
+HTTP/1.1 200 OK
+content-length: 40
+Content-Type: application/json;charset=UTF-8
+
+{"id":5,"type":"Nights","bookings":null}{"id":5,"type":"Nights","bookings":[]}
+
+Delete a Time Slot:
+
+Time slot ID: 5
+HTTP/1.1 204 No Content
+
+
+
+ROLE BLOCK:
+
+
+
+Index Administrator (All) roles:
+
+[{"id":1,"type":"Member","applicationUsers":[{"id":7,"firstName":"Coffee","lastName":"Addict","email":"coffee@email.com","username":"coffeeAddict","password":"$2a$12$VcC9pIWDMs6LjJqXdq2vc.Hm7nSKnsWyvLnoK/PB.HQU9IIlDNt7G","bookings":[]},{"id":9,"firstName":"Garden","lastName":"Guru","email":"garden@email.com","username":"gardenGuru","password":"$2a$12$ezcMACiDoqzdRnyzG1V9cOiZENv4DBz.SIHQGgwAXiy6rkViKZL5a","bookings":[]},{"id":2,"firstName":"Treasure","lastName":"Hunter","email":"treasurehunter@email.com","username":"treasureHunter","password":"$2a$12$fudMJx8ZZrXBx/QqmZwiqOWfykAC.4f453DwTl6YOBKSVX4hnHnfO","bookings":[{"id":2,"bookingDate":"2022-03-10","acceptanceState":"ACCEPTED","state":"CANCELED","meetingRoom":{"id":2,"roomName":"Bravo"},"timeSlot":{"id":2,"type":"Afternoon"},"nocco":{"id":3,"name":"Blood Orange","caffeine":180}},{"id":1,"bookingDate":"2022-03-10","acceptanceState":"PENDING","state":"ACTIVE","meetingRoom":{"id":1,"roomName":"Alpha"},"timeSlot":{"id":1,"type":"Morning"},"nocco":{"id":2,"name":"Limon del Sol","caffeine":180}}]},{"id":4,"firstName":"Music","lastName":"Maestro","email":"musicmaestro@email.com","username":"musicMaestro","password":"$2a$12$k5i98QmJz/P2Hn3CSnMWy.oiD2ZfjuLQgH2nX5U2x80t0qZCviYYi","bookings":[{"id":1,"bookingDate":"2022-03-10","acceptanceState":"PENDING","state":"ACTIVE","meetingRoom":{"id":1,"roomName":"Alpha"},"timeSlot":{"id":1,"type":"Morning"},"nocco":{"id":2,"name":"Limon del Sol","caffeine":180}}]},{"id":6,"firstName":"Code","lastName":"Wizard","email":"codewizard@email.com","username":"codeWizard","password":"$2a$12$csVljFjaV2aoW8attpAxc.GvaWIcOQ4SsWYk1GiEvxXNFuO9UYaCy","bookings":[]},{"id":10,"firstName":"Midnight","lastName":"Rider","email":"midnight@email.com","username":"midnightRider","password":"$2a$12$1Qs6OGZB4ATwbg5f1Rxr2ulIpc2uawA2pGu6IRLENl1p1J4K/Vwye","bookings":[]},{"id":8,"firstName":"Book","lastName":"Worm","email":"bookworm@email.com","username":"bookworm","password":"$2a$12$VrYsEdJ3l.Gm7y/xCZx2Ze7aplwaTkhWnKrGjFvSHSaJj4RFYXoQS","bookings":[]},{"id":5,"firstName":"Wander","lastName":"lust23","email":"wander@email.com","username":"wanderlust23","password":"$2a$12$CeOXyO34IF1Drz1Z3mf6Uex2vz6zpRZErQYe/ub3V2bpqo7KKCUaW","bookings":[]}]},{"id":2,"type":"Administrator","applicationUsers":[{"id":1,"firstName":"Luke","lastName":"Skywalker","email":"luke@jedi.com","username":"skywalker","password":"$2a$12$tFC3Hqn/YDkmWYwdn5yaIeXlMcILj0E0hJI.PTBLX01OCPciHg6OG","bookings":[]}]}]
+
+Show a single role:
+
+[{"id":1,"type":"Member","applicationUsers":[{"id":4,"firstName":"Music","lastName":"Maestro","email":"musicmaestro@email.com","username":"musicMaestro","password":"$2a$12$k5i98QmJz/P2Hn3CSnMWy.oiD2ZfjuLQgH2nX5U2x80t0qZCviYYi","bookings":[{"id":1,"bookingDate":"2022-03-10","acceptanceState":"PENDING","state":"ACTIVE","meetingRoom":{"id":1,"roomName":"Alpha"},"timeSlot":{"id":1,"type":"Morning"},"nocco":{"id":2,"name":"Limon del Sol","caffeine":180}}]},{"id":7,"firstName":"Coffee","lastName":"Addict","email":"coffee@email.com","username":"coffeeAddict","password":"$2a$12$VcC9pIWDMs6LjJqXdq2vc.Hm7nSKnsWyvLnoK/PB.HQU9IIlDNt7G","bookings":[]},{"id":5,"firstName":"Wander","lastName":"lust23","email":"wander@email.com","username":"wanderlust23","password":"$2a$12$CeOXyO34IF1Drz1Z3mf6Uex2vz6zpRZErQYe/ub3V2bpqo7KKCUaW","bookings":[]},{"id":10,"firstName":"Midnight","lastName":"Rider","email":"midnight@email.com","username":"midnightRider","password":"$2a$12$1Qs6OGZB4ATwbg5f1Rxr2ulIpc2uawA2pGu6IRLENl1p1J4K/Vwye","bookings":[]},{"id":2,"firstName":"Treasure","lastName":"Hunter","email":"treasurehunter@email.com","username":"treasureHunter","password":"$2a$12$fudMJx8ZZrXBx/QqmZwiqOWfykAC.4f453DwTl6YOBKSVX4hnHnfO","bookings":[{"id":1,"bookingDate":"2022-03-10","acceptanceState":"PENDING","state":"ACTIVE","meetingRoom":{"id":1,"roomName":"Alpha"},"timeSlot":{"id":1,"type":"Morning"},"nocco":{"id":2,"name":"Limon del Sol","caffeine":180}},{"id":2,"bookingDate":"2022-03-10","acceptanceState":"ACCEPTED","state":"CANCELED","meetingRoom":{"id":2,"roomName":"Bravo"},"timeSlot":{"id":2,"type":"Afternoon"},"nocco":{"id":3,"name":"Blood Orange","caffeine":180}}]},{"id":6,"firstName":"Code","lastName":"Wizard","email":"codewizard@email.com","username":"codeWizard","password":"$2a$12$csVljFjaV2aoW8attpAxc.GvaWIcOQ4SsWYk1GiEvxXNFuO9UYaCy","bookings":[]},{"id":8,"firstName":"Book","lastName":"Worm","email":"bookworm@email.com","username":"bookworm","password":"$2a$12$VrYsEdJ3l.Gm7y/xCZx2Ze7aplwaTkhWnKrGjFvSHSaJj4RFYXoQS","bookings":[]},{"id":9,"firstName":"Garden","lastName":"Guru","email":"garden@email.com","username":"gardenGuru","password":"$2a$12$ezcMACiDoqzdRnyzG1V9cOiZENv4DBz.SIHQGgwAXiy6rkViKZL5a","bookings":[]}]},{"id":2,"type":"Administrator","applicationUsers":[{"id":1,"firstName":"Luke","lastName":"Skywalker","email":"luke@jedi.com","username":"skywalker","password":"$2a$12$tFC3Hqn/YDkmWYwdn5yaIeXlMcILj0E0hJI.PTBLX01OCPciHg6OG","bookings":[]}]}]
+
+Create role:
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    80  100    53  100    27    445    227 --:--:-- --:--:-- --:--:--   689
+
+
+{"id":4,"type":"Super Admin","applicationUsers":null}
+
+
+Update role as Administrator:
+
+HTTP/1.1 200 OK
+content-length: 59
+Content-Type: application/json;charset=UTF-8
+
+{"id":4,"type":"Ultra Super Admin","applicationUsers":null}
+
+Delete a Role:
+
+Role ID: 4
+HTTP/1.1 204 No Content

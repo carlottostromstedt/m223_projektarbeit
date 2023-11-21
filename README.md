@@ -42,6 +42,8 @@ Mit `sh tests.sh` auf osx, `./tests.sh` auf linux und auf Windows bitte WSL verw
 
 Das script loggt automatisch einen Admin und einen Member user an und speichert die Bearer tokens in bash-variablen. Diese werden dann für die einzelnen Tests / Requests verwendet.
 
+Zusätzlich ist einer meiner Durchläufe des Skripts in `src/main/resources/test_outputs.txt`gespeichert.
+
 ## Ausgangslage
 Ein Coworking Space in der Agglomeration von Zürich möchte in Zukunft seine Mitglieder und die Nutzung des Angebots digital über eine Webapplikation erfassen. Dazu sollte zuerst ein minimaler Prototyp realisiert werden, um den Kunden besser abholen zu können.
 ## Aufgabe
