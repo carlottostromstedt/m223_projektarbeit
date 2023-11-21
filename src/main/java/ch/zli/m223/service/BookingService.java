@@ -55,7 +55,7 @@ public class BookingService {
         Booking booking = entityManager.find(Booking.class, id);
         booking.setAcceptanceState(AcceptanceState.ACCEPTED);
         entityManager.merge(booking);
-        return Response.status(200).build();
+        return Response.status(204).build();
     }
 
     @Transactional
@@ -63,7 +63,7 @@ public class BookingService {
         Booking booking = entityManager.find(Booking.class, id);
         booking.setAcceptanceState(AcceptanceState.DECLINED);
         entityManager.merge(booking);
-        return Response.status(200).build();
+        return Response.status(204).build();
     }
 
     @Transactional
@@ -75,7 +75,7 @@ public class BookingService {
         if (participants.contains(user)){
             booking.setState(State.CANCELED);
             entityManager.merge(booking);
-            return Response.status(200).build();
+            return Response.status(204).build();
         } else {
             return Response.status(403).build();
         }

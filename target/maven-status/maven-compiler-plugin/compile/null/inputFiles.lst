@@ -13,7 +13,6 @@
 /workspace/src/main/java/ch/zli/m223/service/ApplicationUserService.java
 /workspace/src/main/java/ch/zli/m223/service/BookingService.java
 /workspace/src/main/java/ch/zli/m223/controller/MeetingRoomController.java
-/workspace/src/main/java/ch/zli/m223/controller/SessionController.java
 /workspace/src/main/java/ch/zli/m223/service/RoleService.java
 /workspace/src/main/java/ch/zli/m223/model/TimeSlot.java
 /workspace/src/main/java/ch/zli/m223/controller/ApplicationUserController.java
