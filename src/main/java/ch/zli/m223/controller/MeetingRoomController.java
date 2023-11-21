@@ -71,13 +71,4 @@ public class MeetingRoomController {
     public MeetingRoom updatePut(Long id, MeetingRoom meetingRoom){
         return meetingRoomService.update(id, meetingRoom);
     }
-
-    @PATCH
-    @Path("/{id}")
-    @RolesAllowed({ "Administrator" })
-    @Operation(summary = "Update a meeting room partially", description = "Updates a meeting room partially and returns meeting room")
-    @Transactional
-    public MeetingRoom updatePatch(Long id, MeetingRoom role){
-        return meetingRoomService.partialUpdate(id, role);
-    }
 }

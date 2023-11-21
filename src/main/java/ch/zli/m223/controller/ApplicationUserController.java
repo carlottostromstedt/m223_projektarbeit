@@ -79,13 +79,4 @@ public class ApplicationUserController {
     public ApplicationUser updatePut(Long id, ApplicationUser user){
         return applicationUserService.update(id, user);
     }
-
-    @PATCH
-    @Path("/{id}")
-    @RolesAllowed({ "Administrator", "Member" })
-    @Operation(summary = "Update a user partially", description = "Updates a user partially and returns user")
-    @Transactional
-    public ApplicationUser updatePatch(Long id, ApplicationUser user){
-        return applicationUserService.partialUpdate(id, user);
-    }
 }

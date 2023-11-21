@@ -64,14 +64,4 @@ public class RoleController {
     public Role updatePut(Long id, Role role){
         return roleService.update(id, role);
     }
-
-    @PATCH
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Path("/{id}")
-    @RolesAllowed({ "Administrator" })
-    @Operation(summary = "Update a role partially", description = "Updates a role partially and returns role")
-    @Transactional
-    public Role updatePatch(Long id, Role role){
-        return roleService.partialUpdate(id, role);
-    }
 }

@@ -71,13 +71,4 @@ public class TimeSlotController {
     public TimeSlot updatePut(Long id, TimeSlot timeSlot){
         return timeSlotService.update(id, timeSlot);
     }
-
-    @PATCH
-    @Path("/{id}")
-    @RolesAllowed({ "Administrator" })
-    @Operation(summary = "Update a time slot partially", description = "Updates a time slot partially and returns time slot")
-    @Transactional
-    public TimeSlot updatePatch(Long id, TimeSlot timeSlot){
-        return timeSlotService.partialUpdate(id, timeSlot);
-    }
 }

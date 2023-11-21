@@ -41,11 +41,4 @@ public class MeetingRoomService {
         meetingRoom.setId(id);
         return entityManager.merge(meetingRoom);
     }
-
-    // TODO: update this to do partialUpdate instead of full update
-    public MeetingRoom partialUpdate(Long id, MeetingRoom meetingRoom){
-        meetingRoom.setId(id);
-        return entityManager.merge(meetingRoom);
-    }
-
 }

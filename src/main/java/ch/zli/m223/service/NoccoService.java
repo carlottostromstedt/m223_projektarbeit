@@ -41,11 +41,4 @@ public class NoccoService {
         nocco.setId(id);
         return entityManager.merge(nocco);
     }
-
-    // TODO: update this to do partialUpdate instead of full update
-    public Nocco partialUpdate(Long id, Nocco nocco){
-        nocco.setId(id);
-        return entityManager.merge(nocco);
-    }
-
 }

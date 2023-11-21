@@ -72,13 +72,4 @@ public class NoccoController {
     public Nocco updatePut(Long id, Nocco nocco){
         return noccoService.update(id, nocco);
     }
-
-    @PATCH
-    @Path("/{id}")
-    @RolesAllowed({ "Administrator" })
-    @Operation(summary = "Update a nocco partially", description = "Updates a nocco partially and returns nocco")
-    @Transactional
-    public Nocco updatePatch(Long id, Nocco nocco){
-        return noccoService.partialUpdate(id, nocco);
-    }
 }

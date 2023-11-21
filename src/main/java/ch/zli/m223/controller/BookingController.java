@@ -139,13 +139,4 @@ public class BookingController {
     public Booking updatePut(Long id, Booking booking){
         return bookingService.update(id, booking);
     }
-
-    @PATCH
-    @Path("/{id}")
-    @RolesAllowed({ "Administrator" })
-    @Operation(summary = "Update a booking partially", description = "Updates a booking partially and returns booking")
-    @Transactional
-    public Booking updatePatch(Long id, Booking booking){
-        return bookingService.partialUpdate(id, booking);
-    }
 }

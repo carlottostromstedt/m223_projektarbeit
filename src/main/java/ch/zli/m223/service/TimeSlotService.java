@@ -41,11 +41,4 @@ public class TimeSlotService {
         timeSlot.setId(id);
         return entityManager.merge(timeSlot);
     }
-
-    // TODO: update this to do partialUpdate instead of full update
-    public TimeSlot partialUpdate(Long id, TimeSlot timeSlot){
-        timeSlot.setId(id);
-        return entityManager.merge(timeSlot);
-    }
-
 }

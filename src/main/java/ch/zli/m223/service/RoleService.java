@@ -51,10 +51,4 @@ public class RoleService {
         return entityManager.merge(role);
     }
 
-    // TODO: update this to do partialUpdate instead of full update
-    public Role partialUpdate(Long id, Role role){
-        role.setId(id);
-        return entityManager.merge(role);
-    }
-
 }

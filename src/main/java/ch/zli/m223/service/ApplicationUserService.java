@@ -75,9 +75,4 @@ public class ApplicationUserService {
         user.setId(id);
         return entityManager.merge(user);
     }
-
-    public ApplicationUser partialUpdate(Long id, ApplicationUser user){
-        user.setId(id);
-        return entityManager.merge(user);
-    }
 }

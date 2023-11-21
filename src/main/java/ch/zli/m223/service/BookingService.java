@@ -90,11 +90,4 @@ public class BookingService {
         booking.setId(id);
         return entityManager.merge(booking);
     }
-
-    // TODO: update this to do partialUpdate instead of full update
-    public Booking partialUpdate(Long id, Booking booking){
-        booking.setId(id);
-        return entityManager.merge(booking);
-    }
-
 }
