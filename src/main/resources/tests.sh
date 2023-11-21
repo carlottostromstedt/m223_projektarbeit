@@ -124,7 +124,8 @@ curl -X 'GET' \
   'http://localhost:8080/booking/1' \
   -H 'accept: application/json' -H "$authorization_admin"
 
-echo "\n\n${GREEN}Create Booking:${NC} \n"
+# Create a Booking as an Administrator
+echo "\n\n${GREEN}Create Booking as Administrator:${NC} \n"
 booking_response=$(curl -X 'POST' \
   'http://localhost:8080/booking' \
   -H 'accept: application/json' \
@@ -145,9 +146,40 @@ booking_response=$(curl -X 'POST' \
   }
 }')
 
+
+
 echo "\n\n$booking_response"
 
 booking_id=$(echo "$booking_response" | grep -o '"id":[0-9]*,"bookingDate"' | awk -F'"id":|,"bookingDate"' '{print $2}')
+
+echo "\n\n${GREEN}Create Booking as Member:${NC} \n"
+
+booking_response_member=$(curl -X 'POST' \
+  'http://localhost:8080/booking' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -H "$authorization_member" \
+  -d '{
+  "bookingDate": "2023-04-10",
+  "acceptanceState": "PENDING",
+  "state": "ACTIVE",
+  "meetingRoom": {
+    "id": 1
+  },
+  "timeSlot": {
+    "id": 2
+  },
+  "nocco": {
+    "id": 2
+  }
+}')
+
+
+
+echo "\n\n$booking_response_member"
+
+booking_id_member=$(echo "$booking_response_member" | grep -o '"id":[0-9]*,"bookingDate"' | awk -F'"id":|,"bookingDate"' '{print $2}')
+
 
 echo "\n\n${GREEN}Update Booking as Administrator:${NC} \n"
 
@@ -217,6 +249,11 @@ if [ -n "${booking_id}" ]; then
 else
   echo "Booking ID is empty or not properly set."
 fi
+
+curl -i -X 'DELETE' \
+    "http://localhost:8080/booking/${booking_id_member}" \
+    -H 'accept: */*' \
+    -H "$authorization_admin"
 
 echo "\n\n${LIGHT_BLUE}MEETING ROOM BLOCK:${NC} \n"
 

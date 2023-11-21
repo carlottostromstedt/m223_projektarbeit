@@ -21,7 +21,7 @@ import java.util.Set;
 @Entity
 @Table(name="BOOKING",
     uniqueConstraints = {
-      @UniqueConstraint(columnNames = {"meetingRoom_id", "timeSlot_id"})
+      @UniqueConstraint(columnNames = {"bookingdate","meetingRoom_id", "timeSlot_id"})
     }
 )
 public class Booking {
