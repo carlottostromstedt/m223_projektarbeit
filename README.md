@@ -32,6 +32,16 @@ Die Daten werden in einer PostgreSQL-Datenbank gespeichert. In der Entwicklungsu
 
 Testdaten sind unter `src/main/resources/import.sql`. Sie werden automatisch beim Start von Quarkus geladen.
 
+### Test-Skript
+
+Tests wurden statt mit Postman als Bash-Script mit Curls geschrieben.
+
+Das test-file ist unter `src/main/resources/tests.sh` zu finden.
+
+Mit `sh tests.sh` auf osx, `./tests.sh` auf linux und auf Windows bitte WSL verwenden und somit `./tests.sh`.
+
+Das script loggt automatisch einen Admin und einen Member user an und speichert die Bearer tokens in bash-variablen. Diese werden dann für die einzelnen Tests / Requests verwendet.
+
 ## Ausgangslage
 Ein Coworking Space in der Agglomeration von Zürich möchte in Zukunft seine Mitglieder und die Nutzung des Angebots digital über eine Webapplikation erfassen. Dazu sollte zuerst ein minimaler Prototyp realisiert werden, um den Kunden besser abholen zu können.
 ## Aufgabe

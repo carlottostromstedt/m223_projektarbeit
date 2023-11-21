@@ -1,32 +1,34 @@
-# # Curl admin
-# response_admin=$(curl -i -X 'POST' \
-#   'http://localhost:8080/user/login' \
-#   -H 'accept: */*' \
-#   -H 'Content-Type: application/json' \
-#   -d '{
-#   "email": "luke@jedi.com",
-#   "password": "Force123"
-# }')
+#!/bin/bash
 
-# # Extract the authorization bearer token from the response headers
-# authorization_admin=$(echo "$response_admin" | grep -i '^authorization:')
+# Curl admin
+response_admin=$(curl -i -X 'POST' \
+  'http://localhost:8080/user/login' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "email": "luke@jedi.com",
+  "password": "Force123"
+}')
 
-# # Curl admin
-# response_member=$(curl -i -X 'POST' \
-#   'http://localhost:8080/user/login' \
-#   -H 'accept: */*' \
-#   -H 'Content-Type: application/json' \
-#   -d '{
-#   "email": "treasurehunter@email.com",
-#   "password": "XmarkstheSpot!"
-# }')
+# Extract the authorization bearer token from the response headers
+authorization_admin=$(echo "$response_admin" | grep -i '^authorization:')
 
-# # Extract the authorization bearer token from the response headers
-# authorization_member=$(echo "$response_member" | grep -i '^authorization:')
+# Curl admin
+response_member=$(curl -i -X 'POST' \
+  'http://localhost:8080/user/login' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "email": "treasurehunter@email.com",
+  "password": "XmarkstheSpot!"
+}')
 
-authorization_admin="authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tL2lzc3VlciIsInVwbiI6Impkb2VAcXVhcmt1cy5pbyIsImdyb3VwcyI6WyJBZG1pbmlzdHJhdG9yIl0sImVtYWlsIjoibHVrZUBqZWRpLmNvbSIsImlhdCI6MTcwMDU1MzMyMiwiZXhwIjoxNzAwNTk2NTIyLCJqdGkiOiJjZmQzMDI1MS0yNzExLTRkMmEtYmI2OC05MDEzNzE3MWMyZGYifQ.Wp3nN2MOYjoVrfxb5okULPh1PJVNjiPfNm93RFTkEGt3J6jdvtNAXWRG3Z_WIum-SO2f5NsRPf6vrkxwy0GlGuLwERkyypLLNh6-8jReywYTw_Ad99nBLGvOHwVoRgqXUMxdVYZapUoFXHKYO0JoBJ3VPCIy-7sWLsuO0sTRxfAnxdThHui7EjAqmQjwwRc1LvZDydjBT_NawlevW9BplR31iWcTXD3QPTT3oMAtWdp3d_R6O0rhscOF0QK5kaQQ2c_h8Wmy3l74uMT2vSc-WiaKh12nHme8asLF82GCN_BTnqH-sED2htxkeDbQYI9Tf78q3BpNelsm68PSWil17g"
+# Extract the authorization bearer token from the response headers
+authorization_member=$(echo "$response_member" | grep -i '^authorization:')
 
-authorization_member="authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tL2lzc3VlciIsInVwbiI6Impkb2VAcXVhcmt1cy5pbyIsImdyb3VwcyI6WyJNZW1iZXIiXSwiZW1haWwiOiJ0cmVhc3VyZWh1bnRlckBlbWFpbC5jb20iLCJpYXQiOjE3MDA1NTQ3MTQsImV4cCI6MTcwMDU5NzkxNCwianRpIjoiM2EyMTkyZGYtZWFmMS00MjE0LWE5MDAtZjgwNzFkNWE1MzI4In0.kMzcZPpeDAsfD5zhevsdOaEzqIiWm423b1xHFBlaBNfc_aFKJsplM1ZoldvlqD6LTUcjB_xY4FQQkgVd5tQ7GeR2AKnm7bbAu0tBBYLggE9XWX6atddg6Z9s1-rAm1odQgulJd4dQlnfHOwQOezLwoIEGejSTtr4lMuX5veJEkSQOdx0iQCThkUVCZ2cKchjtPAbUbo3-jzWSievM0yrYvBXLhSbROjlgk0JKkt2JKv1M4Viw468Szcebg6nAIyr5RUAUVe3fmvzCOGALqsmsmO289NtFk6rGsg4GAry1mmd7Lf6zT1GfdUQ6bX7GNEU3U1ySaIL27GXrVoxLVrOCA" 
+# authorization_admin="authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tL2lzc3VlciIsInVwbiI6Impkb2VAcXVhcmt1cy5pbyIsImdyb3VwcyI6WyJBZG1pbmlzdHJhdG9yIl0sImVtYWlsIjoibHVrZUBqZWRpLmNvbSIsImlhdCI6MTcwMDU1MzMyMiwiZXhwIjoxNzAwNTk2NTIyLCJqdGkiOiJjZmQzMDI1MS0yNzExLTRkMmEtYmI2OC05MDEzNzE3MWMyZGYifQ.Wp3nN2MOYjoVrfxb5okULPh1PJVNjiPfNm93RFTkEGt3J6jdvtNAXWRG3Z_WIum-SO2f5NsRPf6vrkxwy0GlGuLwERkyypLLNh6-8jReywYTw_Ad99nBLGvOHwVoRgqXUMxdVYZapUoFXHKYO0JoBJ3VPCIy-7sWLsuO0sTRxfAnxdThHui7EjAqmQjwwRc1LvZDydjBT_NawlevW9BplR31iWcTXD3QPTT3oMAtWdp3d_R6O0rhscOF0QK5kaQQ2c_h8Wmy3l74uMT2vSc-WiaKh12nHme8asLF82GCN_BTnqH-sED2htxkeDbQYI9Tf78q3BpNelsm68PSWil17g"
+
+# authorization_member="authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tL2lzc3VlciIsInVwbiI6Impkb2VAcXVhcmt1cy5pbyIsImdyb3VwcyI6WyJNZW1iZXIiXSwiZW1haWwiOiJ0cmVhc3VyZWh1bnRlckBlbWFpbC5jb20iLCJpYXQiOjE3MDA1NTQ3MTQsImV4cCI6MTcwMDU5NzkxNCwianRpIjoiM2EyMTkyZGYtZWFmMS00MjE0LWE5MDAtZjgwNzFkNWE1MzI4In0.kMzcZPpeDAsfD5zhevsdOaEzqIiWm423b1xHFBlaBNfc_aFKJsplM1ZoldvlqD6LTUcjB_xY4FQQkgVd5tQ7GeR2AKnm7bbAu0tBBYLggE9XWX6atddg6Z9s1-rAm1odQgulJd4dQlnfHOwQOezLwoIEGejSTtr4lMuX5veJEkSQOdx0iQCThkUVCZ2cKchjtPAbUbo3-jzWSievM0yrYvBXLhSbROjlgk0JKkt2JKv1M4Viw468Szcebg6nAIyr5RUAUVe3fmvzCOGALqsmsmO289NtFk6rGsg4GAry1mmd7Lf6zT1GfdUQ6bX7GNEU3U1ySaIL27GXrVoxLVrOCA" 
 
 LIGHT_BLUE='\033[1;34m'
 GREEN='\033[0;32m'
